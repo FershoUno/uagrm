@@ -1,0 +1,15 @@
+{
+  "banner": {
+    "title": "Núcleo Linux UAGRM - 2025",
+    "subtitle": "Conectando Ideas, Creando Soluciones",
+    "description": "Tecnología abierta y colaboración",
+    "quote": "“El software libre fomenta el conocimiento”",
+    "ctaText": "Únete a la Comunidad",
+    "ctaLink": "/unete-a-la-comunidad",
+    "images": [
+      "../../src/assets/banner/1-linux-tech.jpg",
+      "../../src/assets/banner/2-linux-network.jpg",
+      "../../src/assets/banner/3-linux-core.jpg"
+    ]
+  }
+}

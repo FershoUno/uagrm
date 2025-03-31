@@ -1,0 +1,15 @@
+{
+  "contactInfo": {
+    "address": "Calle Ejemplo 123, Santa Cruz, Bolivia",
+    "phone": "+591 123 456 789",
+    "email": "contacto@uagrm.edu.bo"
+  },
+  "socialLinks": {
+    "facebook": "https://facebook.com",
+    "twitter": "https://twitter.com",
+    "instagram": "https://instagram.com"
+  },
+  "image": "../../src/assets/contact/ambiente-2.jpg",
+  "visitTitle": "Visítanos en el Núcleo Linux UAGRM",
+  "visitDescription": "Aquí puedes ver el ambiente en el que trabajamos."
+}
