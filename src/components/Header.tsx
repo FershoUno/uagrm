@@ -30,7 +30,7 @@ const Header = () => {
   {/* Logo */}
   <div className="flex items-center space-x-4">
     <Link to="/">
-      <img src="/WTM_Logo_Horizontal.png" alt="Logo Women" className="w-40 p-2" />
+      <img src="/Linux_Logo_Horizontal.png" alt="Logo Women" className="w-40 p-2" />
     </Link>
   </div>
 
@@ -54,7 +54,7 @@ const Header = () => {
   {/* Menú deslizante en móviles */}
   <div id="mobile-menu" className={`fixed top-0 right-0 w-2/3 h-full bg-[#3A0032] dark:bg-black shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out z-50 flex flex-col justify-between py-6`}>
     <div className="flex flex-col items-center">
-      <img src="/WTM_Logo_Horizontal.png" alt="Logo Women" className="w-40 p-2" />
+      <img src="/Linux_Logo_Horizontal.png" alt="Logo Women" className="w-40 p-2" />
     </div>
 
     <nav className="flex flex-col items-center space-y-6">
@@ -62,8 +62,8 @@ const Header = () => {
        <button onClick={() => handleNavigation("/sobre-nosotros")} className="hover:text-[#762763] transition-colors duration-300 text-lg">Sobre Nosotros</button>
       <button onClick={() => handleNavigation("/noticias")} className="hover:text-[#762763] transition-colors duration-300 text-lg">Noticias</button>
    
-      <button onClick={() => handleNavigation("/ubicacion")} className="hover:text-[#762763] transition-colors duration-300 text-lg">Ubicación</button>
-      <button onClick={() => handleNavigation("/contacto")} className="hover:text-[#762763] transition-colors duration-300 text-lg">Contacto</button>
+      <button onClick={() => handleNavigation("/Attention")} className="hover:text-[#762763] transition-colors duration-300 text-lg">Ubicación</button>
+      <button onClick={() => handleNavigation("/contact")} className="hover:text-[#762763] transition-colors duration-300 text-lg">Contacto</button>
     </nav>
 
     {/* Redes sociales */}

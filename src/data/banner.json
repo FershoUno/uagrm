@@ -7,9 +7,10 @@
     "ctaText": "Únete a la Comunidad",
     "ctaLink": "/unete-a-la-comunidad",
     "images": [
-      "../../src/assets/banner/1-linux-tech.jpg",
+      "../assets/banner/1-linux-tech.jpg",
       "../../src/assets/banner/2-linux-network.jpg",
-      "../../src/assets/banner/3-linux-core.jpg"
+      "./../assets/banner/1-linux-tech.jpg",
+      "../../public/banner/1-linux-tech.jpg"
     ]
   }
 }
