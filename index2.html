@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Aquí es donde se define la redirección
+    window.onload = function () {
+      // Redirigir después de 3 segundos
+      setTimeout(function () {
+        window.location.href = '/public/index.html'; // Cambia esta URL por la de la carpeta deseada
+      }, 3000); // 3000 ms = 3 segundos
+    };
+  </script>
+</head>
+
+<body>
+  <div class="loading-container">
+    <div class="loading-text">
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+    </div>
+  </div>
+
+  <style>
+    /* Establece una fuente Ubuntu y un fondo gris oscuro */
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color: #3A0032;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Contenedor de carga */
+    .loading-container {
+      text-align: center;
+    }
+
+    /* Estilo del texto cargando */
+    .loading-text {
+      font-size: 3rem;
+      color: #e95420;
+      /* Color naranja de Ubuntu */
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    /* Estilo de los puntos */
+    .dot {
+      opacity: 0;
+      animation: dot-blink 1.5s infinite;
+    }
+
+    /* Animación para los puntos */
+    @keyframes dot-blink {
+
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Secuencia de animación para los puntos */
+    .dot:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    /* Agrega un pequeño efecto de pulsación en el contenedor */
+    .loading-container:hover .loading-text {
+      color: #ff5c00;
+      /* Un tono más brillante de naranja */
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+  </style>
+</body>
+
+</html>
