@@ -15,7 +15,7 @@ const HorarioAtencion = ({
   encargado: string;
   notas: string;
 }) => (
-  <div className="flex flex-col md:flex-row justify-between items-start md:items-center bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-sm space-y-4 md:space-y-0 md:space-x-6">
+  <div className="mx-auto p-8 rounded-xl shadow-2xl">
     <div className="flex items-center space-x-2">
       <i className="bx bx-calendar text-lg text-gray-600 dark:text-gray-300"></i>
       <p className="text-gray-800 dark:text-gray-300 font-medium">{dia}</p>
@@ -36,24 +36,25 @@ const Attention = () => {
     setContact(attentionData);
   }, []);
 
-  if (!contact) return <div>Cargando...</div>;
+  if (!contact) return <div className="text-center text-gray-500 dark:text-gray-300">Cargando...</div>;  // Cargando más estilizado
+
+  const { location, officeHours } = contact;  // Desestructuración para mayor claridad
 
   return (
-    <div className="container mx-auto p-8 bg-white dark:bg-[#262D48] rounded-lg shadow-lg">
+<div className="mx-auto p-8  rounded-xl shadow-2xl">
       {/* Mapa de Google */}
-      <div className="bg-white p-8 rounded-lg shadow-lg mt-10 text-black dark:bg-[#3d2a3b] dark:text-white">
-        <h3 className="text-2xl font-semibold text-lila-500 dark:text-lila-400 mb-5">{contact.location.title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-5">{contact.location.description}</p>
-
-        {/* Imagen representativa de la oficina */}
-        <div className="mb-6">
-          <img src={contact.location.image} alt="Oficina Núcleo Linux UAGRM" className="w-full h-auto rounded-lg" />
-        </div>
-
+      <div className="bg-white p-2 rounded-lg shadow-lg  text-black dark:bg-[#3d2a3b] dark:text-white">
+          {/* Título y descripción */}
+  <div className="text-center mb-8">
+    <h2 className="text-4xl font-semibold text-black dark:text-white mb-4">{location.title}</h2>
+    <p className="text-lg text-gray-700 dark:text-gray-300">
+      {location.description}
+    </p>
+  </div>
         {/* Mapa Embed de Google */}
-        <div className="w-full h-64 bg-gray-600 rounded-md mb-6">
+        <div className="w-full h-64 bg-gray-600 rounded-md mb-4">
           <iframe
-            src={contact.location.mapUrl}
+            src={location.mapUrl}
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -65,24 +66,21 @@ const Attention = () => {
         <div className="mb-6">
           <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Dirección:</h4>
           <p className="text-gray-600 dark:text-gray-300">
-            {contact.location.addressDetails.street}, {contact.location.addressDetails.city}, {contact.location.addressDetails.state}, {contact.location.addressDetails.country} - {contact.location.addressDetails.zipCode}
+            {location.addressDetails.street}, {location.addressDetails.city}, {location.addressDetails.state}, {location.addressDetails.country} - {location.addressDetails.zipCode}
           </p>
         </div>
       </div>
 
       {/* Horarios de Atención */}
-      <div className="bg-white p-8 rounded-lg shadow-lg mt-10 text-black dark:bg-[#3d2a3b] dark:text-white">
-        <h3 className="text-2xl font-semibold text-lila-500 dark:text-lila-400 mb-5 flex items-center">
-          <i className="bx bx-time text-3xl mr-3"></i>
-          Horario de Atención Núcleo Linux UAGRM
-        </h3>
-
+      <div className="p-8 rounded-lg shadow-lg mt-10 text-black dark:bg-[#3d2a3b] dark:text-white">
         {/* Horarios */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Horario de Atención</h2>
-
+          <h2 className="text-4xl font-semibold text-black dark:text-white mb-4 text-center">
+              <i className="bx bx-time text-3xl mr-3"></i>
+            Horario de Atención</h2> {/* Centrado y el nuevo tamaño */}
+          
           {/* Usar el componente HorarioAtencion */}
-          {contact.officeHours.map((item, index) => (
+          {officeHours.map((item, index) => (
             <HorarioAtencion
               key={index}
               dia={item.day}
@@ -93,8 +91,6 @@ const Attention = () => {
           ))}
         </div>
       </div>
-
-
     </div>
   );
 };

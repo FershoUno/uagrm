@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"; // Solo importamos los hooks necesarios
 import bannerData from '../data/banner.json'; // Importar el archivo JSON
-import { BannerData } from '../types/banner';  // Importamos el tipo BannerData
+ // Importamos el tipo BannerData
 
 // Componente para enlaces de redes sociales
 const SocialLink = ({

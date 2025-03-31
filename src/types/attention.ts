@@ -1,9 +1,9 @@
-// src/types/data.ts
-
-export interface OfficeHour {
-  day: string;
-  time: string;
-  inCharge: string;
+export interface AddressDetails {
+  street: string;
+  city: string;
+  state: string;
+  country: string;
+  zipCode: string;
 }
 
 export interface Location {
@@ -11,6 +11,14 @@ export interface Location {
   description: string;
   image: string;
   mapUrl: string;
+  addressDetails: AddressDetails;  // Aquí agregamos addressDetails
+}
+
+export interface OfficeHour {
+  day: string;
+  time: string;
+  inCharge: string;
+  notes: string;  // Asegúrate de que "notes" también esté en la estructura.
 }
 
 export interface ContactInfo {
@@ -21,7 +29,7 @@ export interface ContactInfo {
 
 export interface AttentionData {
   contactInfo: ContactInfo;
-  socialLinks: {
+  socialLinks?: {  // Hacemos socialLinks opcional
     facebook: string;
     twitter: string;
     instagram: string;

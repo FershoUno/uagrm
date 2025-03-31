@@ -14,7 +14,7 @@ const Contact = () => {
   if (!contact) return <div>Cargando...</div>; // Mostrar un mensaje mientras se cargan los datos
 
   return (
-<div className="container mx-auto p-8 bg-white dark:bg-[#1E2533] rounded-xl shadow-2xl">
+<div className="mx-auto p-8  rounded-xl shadow-2xl">
   {/* Título y descripción */}
   <div className="text-center mb-12">
     <h2 className="text-4xl font-semibold text-black dark:text-white mb-4">Contáctanos</h2>
@@ -49,7 +49,6 @@ const Contact = () => {
         </a>
         <a
           href={contact.socialLinks.twitter}
-          target="_blank"
           rel="noopener noreferrer"
           className="hover:text-sky-500 transition-colors duration-300"
         >
@@ -57,7 +56,6 @@ const Contact = () => {
         </a>
         <a
           href={contact.socialLinks.instagram}
-          target="_blank"
           rel="noopener noreferrer"
           className="hover:text-pink-600 transition-colors duration-300"
         >

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
         <a href="/" className="flex items-center space-x-3">
           <img
-            src="/nucleo_linux_logo.png"
+            src="../../src/assets/logo/logo.jpg"
             className="h-16"
             alt="Núcleo Linux UAGRM"
           />
@@ -19,15 +19,15 @@ const Footer = () => {
           {
             title: "Recursos",
             links: [
-              { name: "Eventos", href: "https://www.instagram.com/nucleolinuxuagrm" },
-              { name: "Comunidad", href: "https://www.instagram.com/nucleolinuxuagrm" },
+              { name: "Eventos", href: "#" },
+              { name: "Comunidad", href: "#" },
             ],
           },
           {
             title: "Síguenos",
             links: [
-              { name: "Facebook", href: "https://www.facebook.com/nucleolinuxuagrm" },
-              { name: "Instagram", href: "https://www.instagram.com/nucleolinuxuagrm" },
+              { name: "Facebook", href: "https://www.facebook.com/nucleolinuxuagrmsz" },
+              { name: "Instagram", href: "#" },
             ],
           },
           {
@@ -68,9 +68,9 @@ const Footer = () => {
 
       <div className="flex space-x-5 mt-4 sm:mt-0">
         {[
-          { href: "https://www.facebook.com/nucleolinuxuagrm", icon: "bxl-facebook", label: "Facebook" },
-          { href: "https://www.instagram.com/nucleolinuxuagrm", icon: "bxl-instagram", label: "Instagram" },
-          { href: "https://www.linkedin.com/company/nucleolinuxuagrm/", icon: "bxl-linkedin", label: "LinkedIn" },
+          { href: "https://www.facebook.com/nucleolinuxuagrmsz", icon: "bxl-facebook", label: "Facebook" },
+          { href: "#", icon: "bxl-instagram", label: "Instagram" },
+          { href: "#", icon: "bxl-linkedin", label: "LinkedIn" },
         ].map((social) => (
           <a
             key={social.label}
